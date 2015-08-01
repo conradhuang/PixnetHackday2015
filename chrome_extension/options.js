@@ -9,7 +9,11 @@ $(document).ready(function() {
 	}
 
 	var getLocal = localStorage["PIXNET_HACK_ADS_TYPE"];
-	var getLocalArray = getLocal.split(",");
+	var getLocalArray = [];
+
+	if (getLocal) {
+		getLocalArray = getLocal.split(",");
+	}
 
 	$('input[type=checkbox]').attr('checked', false);
 	for (i = 0; i < getLocalArray.length; i++) {
@@ -24,6 +28,7 @@ $(document).ready(function() {
 		    }
 		});
 		var result = array.join(",");
+
 		localStorage["PIXNET_HACK_ADS_TYPE"] = result;
 
 		// PIXNET_HACK_ADS_TYPE
