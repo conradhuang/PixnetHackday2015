@@ -31,20 +31,7 @@
     z-index: 100;
 }
 
-.open-ads-more {
-    display: inline;
-    text-align: center;
-    vertical-align: middle;
-    text-shadow:1px 1px 1px #cccccc;
-    color: #FFFFFF;
-    width: 10em;
-    height: 100%;
-    margin: 0 auto;
-    background: transparent !important;
-    z-index: 100;
-}
-
-.open-ads-text:hover, .open-ads-more:hover {
+.open-ads-text:hover {
 	text-shadow: 0 0 10px #fff,
                    0 0 20px #fff,
                    0 0 30px #fff,

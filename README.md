@@ -8,3 +8,18 @@ We proposed adblocker-liked knowledge ads extension on chrome. User could select
 Besides, we also provide leader board to show which topics get highest rating !
 
 Keyword: Chrome extension, javascript, jQuery, Storage API
+
+#### [巴哈姆特電玩資訊站](http://.gamer.com.tw/)
+![www.gamer.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_1.jpg)
+
+#### [蘋果日報](http://www.appledaily.com.tw/)
+![www.appledaily.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_2.jpg)
+
+#### [mobile01](http://www.mobile.com.tw/)  
+![www.mobile.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_3.jpg)
+
+#### 可選擇想要訂閱的類別
+![option](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/option.jpg)
+
+#### 分類排行榜
+![ranking](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/ranking.jpg)
