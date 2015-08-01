@@ -157,7 +157,6 @@ $(document).ready(function() {
 	    	$(answer_text).text(questionSet.answer);
 	    } else {
 	    	var more = document.createElement("span");
-	    	$(more).addClass("open-ads-more");
 	    	$(more).text(" ... more");
 
 	    	$(more).click(function(event) {
