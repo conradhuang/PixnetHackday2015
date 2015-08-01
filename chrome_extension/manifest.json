@@ -19,7 +19,7 @@
     "scripts": [ "scripts/jquery-2.0.0.min.js", "scripts/jquery.easing.1.3.js", "scripts/jquery.easing.compatibility.js", "scripts/flowtype.js" ]
   },
   "content_scripts": [{
-      "all_frames": true,
+      "all_frames": false,
       "js": [ "scripts/jquery-2.0.0.min.js", "scripts/questionbank.js", "scripts/contentscript.js", "scripts/jquery.easing.1.3.js", "scripts/jquery.easing.compatibility.js", "scripts/jquery.flip.min.js", "scripts/flowtype.js", "scripts/typed.js" ],
       "css": [ "styles/yhack.css" ],
       "matches": ["<all_urls>"]
