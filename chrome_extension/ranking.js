@@ -23,6 +23,8 @@ $(document).ready(function() {
       var e = _gData.data[_gCount];
       if (!e)
         break;
+      if (!e.qa)
+        continue;
       if (_gCount === 0) {
         html += '<div class="item"><div class="question_part">' +
           '<div class="rank-1"></div><p>' + e.qa.q + '</p>' +
