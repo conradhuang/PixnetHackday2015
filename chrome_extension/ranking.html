@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <title>test</title>
+  <title>豆知識排行榜</title>
   <meta charset="utf-8">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="styles/yhack_ranking.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
   <script src="scripts/jquery-2.0.0.min.js"></script>
   <script src="scripts/questionbank.js"></script>
   <script src="scripts/masonry.pkgd.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
   <script src="ranking.js"></script>
 </head>
 <body>
@@ -16,6 +18,32 @@
     <img class="ranking_icon" src="icons/icon-48.png">
     <span>豆知識排行榜</span>
   </div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#travel" aria-controls="travel" role="tab" data-toggle="tab">觀光</a></li>
+    <li role="presentation"><a href="#natural" aria-controls="natural" role="tab" data-toggle="tab">自然</a></li>
+    <li role="presentation"><a href="#lifestyle" aria-controls="lifestyle" role="tab" data-toggle="tab">生活</a></li>
+    <li role="presentation"><a href="#care" aria-controls="care" role="tab" data-toggle="tab">醫療</a></li>
+    <li role="presentation"><a href="#finance" aria-controls="finance" role="tab" data-toggle="tab">理財</a></li>
+    <li role="presentation"><a href="#trans" aria-controls="trans" role="tab" data-toggle="tab">交通</a></li>
+    <li role="presentation"><a href="#politic" aria-controls="politic" role="tab" data-toggle="tab">政治</a></li>
+    <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">其他</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="travel">觀光</div>
+    <div role="tabpanel" class="tab-pane" id="natural">自然</div>
+    <div role="tabpanel" class="tab-pane" id="lifestyle">生活</div>
+    <div role="tabpanel" class="tab-pane" id="care">醫療</div>
+    <div role="tabpanel" class="tab-pane" id="finance">理財</div>
+    <div role="tabpanel" class="tab-pane" id="trans">交通</div>
+    <div role="tabpanel" class="tab-pane" id="politic">政治</div>
+    <div role="tabpanel" class="tab-pane" id="other">其他</div>
+  </div>
+
+
   <div id="container" class="container">
 
 <!--

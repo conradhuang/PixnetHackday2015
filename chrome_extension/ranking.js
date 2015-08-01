@@ -9,11 +9,11 @@ $(document).ready(function() {
         for (; count < _count+_gDataCount; count++) {
             var questionSet = QuestionBank.getNextQuestionSet();
             if (count === 0) {
-                html += '<div class="item"><div class="question_part">' +
+                html += '<div class="item" id="' + count + '"><div class="question_part">' +
                 '<div class="rank-1"></div><p>' + questionSet.question + '</p>' +
                 '</div><div class="answer_part"><p>答案 : ' + questionSet.answer + '</p></div></div>';
             } else {
-                html += '<div class="item"><div class="question_part">' +
+                html += '<div class="item" id="' + count + '"><div class="question_part">' +
                 '<div class="rank">' + (count+1) + '</div><p>' + questionSet.question + '</p>' +
                 '</div><div class="answer_part"><p>答案 : ' + questionSet.answer + '</p></div></div>';
             }
@@ -32,6 +32,11 @@ $(document).ready(function() {
             var $items = $(html);
             $('#container').append($items).masonry('appended', $items);
         }
+
+        $('div.item').on('click', function() {
+            $(this).children()[1].style['display'] = "block";
+            $('#container').masonry();
+        });
     }
 
     //IE9, Chrome, Safari, Opera
@@ -55,6 +60,4 @@ $(document).ready(function() {
 
 
     QuestionBank.loadData(appendItem.bind(this, _gCount));
-
-
 });
