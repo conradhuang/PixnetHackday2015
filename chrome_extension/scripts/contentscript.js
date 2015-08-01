@@ -194,7 +194,7 @@ $(document).ready(function() {
 	            url: 'http://test.wjhuang.net/api.php?a=logkg&id=' + questionSet.id,
 	            dataType: 'json',
 	            success: function(result){
-	                console.log("id = " + questionSet.id + " ++");
+	                console.log("status = " + result.msg);
 	            }
 	        });
 		});
