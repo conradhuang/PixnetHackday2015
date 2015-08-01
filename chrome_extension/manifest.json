@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "test",
-  "description": "test",
+  "name": "歐噴豆知識",
+  "description": "歐噴豆知識 - Pixnet Hackathon 2015",
   "version": "0.2",
   "icons": {
       "128": "icons/icon-128.png",
