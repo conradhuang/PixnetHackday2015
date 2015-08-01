@@ -81,17 +81,58 @@ $(document).ready(function() {
 
 		var ads_container = document.createElement("div");
 		var ads_text = document.createElement("div");
+		var ads_ribbon = document.createElement("div");
 
 		var questionSet = QuestionBank.getNextQuestionSet();
 
 		$(target).css("display", "none");
 		$(ads_container).addClass("open-ads front");
 		$(ads_text).addClass("open-ads-text");
+		$(ads_ribbon).addClass("open-ads-ribbon");
 
     	$(ads_container).css({
 	    	"width": $(target).width(),
 	    	"height": $(target).height()
 	    });
+
+    	if(questionSet.cat) {
+    		switch(questionSet.cat) {
+			    case "travel":
+			        $(ads_ribbon).addClass("c1");
+			        $(ads_ribbon).html("旅遊");
+					break;
+			    case "natural":
+			        $(ads_ribbon).addClass("c2");
+			        $(ads_ribbon).html("自然");
+			        break;
+			    case "lifestyle":
+			        $(ads_ribbon).addClass("c3");
+			        $(ads_ribbon).html("生活");
+			        break;
+			    case "care":
+			        $(ads_ribbon).addClass("c4");
+			        $(ads_ribbon).html("醫療");
+			        break;
+			    case "finance":
+			        $(ads_ribbon).addClass("c5");
+			        $(ads_ribbon).html("理財");
+			        break;
+			    case "trans":
+			        $(ads_ribbon).addClass("c6");
+			        $(ads_ribbon).html("交通");
+			        break;
+			    case "politic":
+			        $(ads_ribbon).addClass("c7");
+			        $(ads_ribbon).html("政治");
+			        break;
+			    case "other":
+			        $(ads_ribbon).addClass("c8");
+			        $(ads_ribbon).html("其他");
+			        break;
+			    default:
+			        break;
+			}
+    	}
 
     	// create back
     	var answer_container = document.createElement("div");
@@ -105,6 +146,7 @@ $(document).ready(function() {
 	    $(answer_text).addClass("open-ads-text");
 	    $(answer_text).text(questionSet.answer);
 
+	    $(answer_container).append($(ads_ribbon));
 	    $(answer_container).append($(answer_text));
 
 	    var curr_question = questionSet.question;
@@ -122,6 +164,7 @@ $(document).ready(function() {
     	});
 
     	$(ads_container).append(ads_text);
+    	$(card).append($(ads_ribbon));
     	$(card).append($(ads_container));
     	$(card).append($(answer_container));
 

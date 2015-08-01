@@ -28,6 +28,7 @@
     height: 100%;
     margin: 0 auto;
     background: transparent !important;
+    z-index: 100;
 }
 
 .open-ads-text:hover {
@@ -93,3 +94,49 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.open-ads-ribbon {
+	background-color: gray !important;
+	width: 40px;
+	height: 20px;
+	position: fixed;
+	top: 10px;
+	left: 20px;
+	z-index: 101;
+	color: #000000;
+	font-size: 11px;
+	text-align: center;
+}
+
+.open-ads-ribbon.c1 {
+	background-color: #F7DA64 !important;
+}
+
+.open-ads-ribbon.c2 {
+	background-color: #FBA026 !important;
+}
+
+.open-ads-ribbon.c3 {
+	background-color: #61BD6D !important;
+}
+
+.open-ads-ribbon.c4 {
+	background-color: #54ACD2 !important;
+}
+
+.open-ads-ribbon.c5 {
+	background-color: #F62459 !important;
+}
+
+.open-ads-ribbon.c6 {
+	background-color: #BF55EC !important;
+}
+
+.open-ads-ribbon.c7 {
+	background-color: #ECF0F1 !important;
+}
+
+.open-ads-ribbon.c8 {
+	background-color: #FCC9B9 !important;
+}

@@ -29,6 +29,7 @@ var QuestionBank = (function() {
 
     var loadOpenData = $.Deferred(function(deferred) {
         var cat = localStorage["PIXNET_HACK_ADS_TYPE"];
+        console.log("currect cat = " + 'http://test.wjhuang.net/api.php?a=getkg&n=10&cat=' + cat);
         //console.log("get current cat = " + cat);
 
         $.ajax({
