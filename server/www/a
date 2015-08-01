@@ -1,0 +1,78 @@
+<?php
+
+    require('/home/chienwen/kg/system.inc.php');
+
+    if(!empty($_SERVER['PATH_INFO'])) {
+        $id = substr($_SERVER['PATH_INFO'], 1);
+        $kg = $mongo->kg->findOne(array('id' => $id));
+        if(empty($kg)) die('404');
+    }
+
+?><!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo $kg['q'];?> - 歐噴豆。知識</title>
+    <meta property="og:title" content="<?php echo $kg['q'];?> - 歐噴豆。知識" />
+    <meta property="og:description" content="<?php echo $kg['a'];?>" />
+    <meta property="og:image" content="<?php
+        if(empty($kg['img'])) echo 'http://test.wjhuang.net/images/icon-200.png';
+        else echo $kg['img'];
+    ?>" />
+    <meta property="og:url" content="http://test.wjhuang.net/a/<?php echo $kg['id'];?>" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <style>
+#wrapper {
+    border: 1px solid #e1e1e8;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+.logo {
+    float: left;
+    width: 64px;
+    margin-right: 20px;
+}
+.thumb, .map {
+    float: right;
+    max-width: 200px;
+    margin-left: 20px;
+}
+.more {
+    margin-top: 10px;
+}
+.time {
+    font-size: 80%;
+    color: #aaa;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+
+<div id="wrapper" class="row">
+    <img class="logo" src="/images/icon-128.png" />
+    <h1 class="title"><?php echo $kg['q'];?></h1>
+    
+    <?php if(!empty($kg['location'])) { ?>
+    <img class="map" src="http://gws2.maps.yahoo.com/MapImage?imh=200&imw=200&locale=zh_TW&poi=%2C%2C%2Cll%3B%2Clocation-purple-xs-gws%2C<?php echo $kg['location']['lat'];?>%2C121.551147" />
+    <?php } ?>
+    <?php if(!empty($kg['img'])) { ?>
+    <img class="thumb" src="<?php echo $kg['img'];?>" />
+    <?php } ?>
+    
+    <div class="ans"><?php echo $kg['a'];?></div>
+    
+    <?php if(!empty($kg['url'])) { ?>
+    <div class="more">
+        <a href="<?php echo $kg['url'];?>" >更多資訊</a>
+    </div>
+    <?php } ?>
+    
+    <div class="time"><?php echo date("Y/m/d H:i:s", $kg['ts_c']);?></div>
+    <div style="clear: both"></div>
+</div>
+
+</body>
+</html>
+
