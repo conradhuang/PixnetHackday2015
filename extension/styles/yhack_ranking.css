@@ -1,0 +1,120 @@
+body {
+  padding: 10px;
+  min-width: 660px;
+  height: 400px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 300px;
+  margin: 8px;
+  padding: 12px;
+  font-size: 15px;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+  box-sizing: border-box;
+}
+
+.item:hover {
+  border: none;
+  color: #FFF;
+  background-color: #0850A4;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(45, 45, 45, 1);
+  box-shadow: 0px 0px 20px 0px rgba(45, 45, 45, 1);
+}
+
+.item:hover .question_part {
+  border-bottom: dotted #3773B4 2px;
+}
+
+.item:hover .rank-1 {
+  background-image: url('../images/white-crown.png');
+}
+
+p {
+  -webkit-margin-before: 0.05em;
+  -moz-margin-before: 0.05em;
+  -o-margin-before: 0.05em;
+  margin-before: 0.05em;
+  -webkit-margin-after: 0.3em;
+  -moz-margin-after: 0.3em;
+  -o-margin-after: 0.3em;
+  margin-after: 0.3em;
+}
+
+.question_part {
+  width: 100%;
+  float: left;
+  border-bottom: dotted #d9d9d9 1px;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+.answer_part {
+  width: 100%;
+  display: none;
+  float: left;
+}
+
+.rank-1 {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  background: url('../images/crown.png') center center no-repeat;
+  background-size: cover;
+}
+
+.rank {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 31px;
+  line-height: 31px;
+  text-align: center;
+}
+
+.ranking_icon {
+  vertical-align: middle;
+}
+
+.ranking_title {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+.share_block {
+  width: 100%;
+}
+
+.share_block img {
+  height: 20px;
+  margin-left: 5px;
+  border: 1px solid white;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.redirect-link {
+    float: right;
+}
+
+.redirect-link img {
+    height: 20px;
+    margin-left: 0;
+    border: 1px solid #0850A4;
+}
