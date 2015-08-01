@@ -1,6 +1,6 @@
 <?php
 
-    require('/home/chienwen/kg/system.inc.php');
+    require('../system.inc.php');
 
     $ts = time();
 
