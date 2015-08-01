@@ -127,3 +127,12 @@ input[type="checkbox"] + i:before { content: "\f096"; }
 input[type="checkbox"]:checked + i:before { content: "\f046"; }
 input[type="checkbox"]:checked + i + span,
 input[type="checkbox"]:checked + i:before { color: rgba(255, 255, 255, 1.0); }
+
+.crown {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  background: url('../images/crown.png') center center no-repeat;
+  background-size: cover;
+}
