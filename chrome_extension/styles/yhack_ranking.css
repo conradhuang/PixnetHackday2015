@@ -60,6 +60,7 @@ p {
 }
 
 .answer_part {
+  width: 100%;
   display: none;
   float: left;
 }
@@ -101,9 +102,19 @@ p {
 
 .share_block img {
   height: 20px;
+  margin-left: 5px;
   border: 1px solid white;
-  margin-right: 5px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
+}
+
+.redirect-link {
+    float: right;
+}
+
+.redirect-link img {
+    height: 20px;
+    margin-left: 0;
+    border: 1px solid #0850A4;
 }
