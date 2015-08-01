@@ -10,13 +10,13 @@ Besides, we also provide leader board to show which topics get highest rating !
 Keyword: Chrome extension, javascript, jQuery, Storage API
 
 #### [巴哈姆特電玩資訊站](http://.gamer.com.tw/)
-![www.gamer.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_1.jpg)
+![www.gamer.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/gamer.jpg)
 
 #### [蘋果日報](http://www.appledaily.com.tw/)
-![www.appledaily.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_2.jpg)
+![www.appledaily.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/appledaily.jpg)
 
-#### [mobile01](http://www.mobile.com.tw/)  
-![www.mobile.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/screenshot_3.jpg)
+#### [mobile01](http://www.mobile01.com.tw/)  
+![www.mobile.com.tw](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/mobile01.jpg)
 
 #### 可選擇想要訂閱的類別
 ![option](https://raw.githubusercontent.com/conradhuang/PixnetHackday2015/master/screenshot/option.jpg)
