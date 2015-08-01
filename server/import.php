@@ -12,6 +12,7 @@
         $cat = trim($toks[0]);
         $q = trim($toks[1]);
         $a = trim($toks[2]);
+        $img = ((!empty($toks[3])) && preg_match('/^http/', $toks[3])) ? ($toks[3]) : ('');
         if(!isset($categories[$cat])) {
             echo 'Invalid category "'.$cat.'", skip.'."\n";
             continue;
@@ -19,11 +20,7 @@
 
         if( (!empty($q)) && (!empty($a)) ){
             $mid = 'manual-01-q00-'.$n;
-            $mongo->kg->update(
-                    array(
-                        'id' => $mid,
-                        ),
-                    array(
+            $data = array(
                         'id' => $mid,
                         'cat' => $cat,
                         'q' => $q,
@@ -31,7 +28,15 @@
                         'ts_c' => time(),
                         'ts_v' => 0,
                         'manual' => true,
-                    ),
+                    );
+            if(!empty($img)){
+                $data['img'] = $img;
+            }
+            $mongo->kg->update(
+                    array(
+                        'id' => $mid,
+                        ),
+                    $data,
                     array(
                         'upsert' => true
                     )
