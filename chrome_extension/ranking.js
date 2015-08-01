@@ -39,6 +39,8 @@ $(document).ready(function() {
         });
     }
 
+
+
     //IE9, Chrome, Safari, Opera
     $('#container').bind('mousewheel', function(e) {
         if(e.originalEvent.wheelDelta < 0) {
@@ -60,4 +62,60 @@ $(document).ready(function() {
 
 
     QuestionBank.loadData(appendItem.bind(this, _gCount));
+
+    // 觀光 travel
+    $('#travel a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 觀光 排行榜');
+    });
+
+    // 自然 natural
+    $('#natural a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 自然 排行榜');
+    });
+
+    // 生活 lifestyle
+    $('#lifestyle a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 生活 排行榜');
+    });
+
+    // 醫療 care
+    $('#care a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 醫療 排行榜');
+    });
+
+    // 理財 finance
+    $('#finance a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 理財 排行榜');
+    });
+
+    // 交通 trans
+    $('#trans a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 交通 排行榜');
+    });
+
+    // 政治 politic
+    $('#politic a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 政治 排行榜');
+    });
+
+    // 其他 other
+    $('#other a').click(function (e) {
+      e.preventDefault();
+      // $(this).tab('show');
+      console.log('load 其他 排行榜');
+    });
 });
