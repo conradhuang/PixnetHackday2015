@@ -1,6 +1,6 @@
 <?php
 
-    require('/home/chienwen/kg/system.inc.php');
+    require('../system.inc.php');
 
     if(!empty($_SERVER['PATH_INFO'])) {
         $id = substr($_SERVER['PATH_INFO'], 1);

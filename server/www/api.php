@@ -51,6 +51,20 @@
         return true;
     }
 
+    function getMongoOrCategories($catstr){
+        global $categories;
+        $cats = array();
+        foreach(explode(',', $catstr) as $cat){
+            if(isset($categories[$cat])){
+                $cats[] = $cat;
+            }
+        }
+        if(empty($cats)){
+            return array();
+        }
+        return array('cat' => array('$in' => $cats));
+    }
+
     if($action === 'getkg'){
         $response['data'] = array();
         $dict = array();
@@ -58,12 +72,7 @@
         if(preg_match('/^\d+$/', $n)){
             $query = array();
             if(!empty($_GET['cat'])){
-                if(isset($categories[$_GET['cat']])){
-                    $query = array('cat' => $_GET['cat']);     
-                }
-                else{
-                    $response['warning'] = 'invalid category';
-                }
+                $query = getMongoOrCategories($_GET['cat']);
             }
             $totalkgn = $mongo->kg->count($query);
             if($totalkgn){
@@ -98,12 +107,7 @@
         $mongo->log->ensureIndex('cat');
         $query = array();
         if(!empty($_GET['cat'])){
-            if(isset($categories[$_GET['cat']])){
-                $query = array('cat' => $_GET['cat']);     
-            }
-            else{
-                $response['warning'] = 'invalid category';
-            }
+            $query = getMongoOrCategories($_GET['cat']);
         }
         $query = array_merge($query, array('ts_last' => array('$gt' => $ts - 86400 * 7)));
         $response['debug'] = $query;
@@ -120,7 +124,14 @@
         }
     }
     else if($action === 'getCats'){
-        $response['data'] = $categories;
+        $output = array();
+        foreach($categories as $cat => $name){
+            $output[$cat] = array(
+                        'name' => $name,
+                        'count' => $mongo->kg->count(array('cat' => $cat)),
+                    );
+        }
+        $response['data'] = $output;
     }
     else {
         $response['st'] = 400;
