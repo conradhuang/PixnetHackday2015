@@ -71,6 +71,11 @@ $(document).ready(function() {
 		audio.play();
 	}
 
+	function openInNewWindow(url) {
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+
 	function adsHandling(target) {
 		var card = document.createElement("div");
 		$(card).addClass("card");
@@ -100,7 +105,7 @@ $(document).ready(function() {
     		switch(questionSet.cat) {
 			    case "travel":
 			        $(ads_ribbon).addClass("c1");
-			        $(ads_ribbon).html("旅遊");
+			        $(ads_ribbon).html("觀光");
 					break;
 			    case "natural":
 			        $(ads_ribbon).addClass("c2");
@@ -145,7 +150,23 @@ $(document).ready(function() {
 
 	    var answer_text = document.createElement("div");
 	    $(answer_text).addClass("open-ads-text");
-	    $(answer_text).text(questionSet.answer);
+
+	    var lengthLimit = 20;
+
+	    if (questionSet.answer.length < lengthLimit) {
+	    	$(answer_text).text(questionSet.answer);
+	    } else {
+	    	var more = document.createElement("span");
+	    	$(more).addClass("open-ads-more");
+	    	$(more).text(" ... more");
+
+	    	$(more).click(function(event) {
+				openInNewWindow('http://test.wjhuang.net/a/' + questionSet.id);
+		    });
+
+			$(answer_text).text(questionSet.answer.substring(0, lengthLimit));
+			$(answer_text).append($(more));
+	    }
 
 	    $(answer_container).append($(ads_ribbon));
 	    $(answer_container).append($(answer_text));

@@ -33,7 +33,7 @@ var QuestionBank = (function() {
         //console.log("get current cat = " + cat);
 
         $.ajax({
-            url: 'http://test.wjhuang.net/api.php?a=getkg&n=10&cat=' + cat,
+            url: 'http://test.wjhuang.net/api.php?a=getkg&n=10&&manual=1&cat=' + cat, 
             dataType: 'json',
             success: function(result){
                 questionAmount = result.data.length;
