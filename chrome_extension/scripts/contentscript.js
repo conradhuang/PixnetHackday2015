@@ -100,7 +100,7 @@ $(document).ready(function() {
     		switch(questionSet.cat) {
 			    case "travel":
 			        $(ads_ribbon).addClass("c1");
-			        $(ads_ribbon).html("旅遊");
+			        $(ads_ribbon).html("觀光");
 					break;
 			    case "natural":
 			        $(ads_ribbon).addClass("c2");
