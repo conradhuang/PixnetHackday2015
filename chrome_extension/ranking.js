@@ -31,6 +31,7 @@ $(document).ready(function() {
           '<a href="https://www.facebook.com/sharer/sharer.php?u=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/fb-like.png"></a>' +
           '<a href="https://twitter.com/home?status=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/twitter-share.png"></a>' +
           '<a href="https://plus.google.com/share?url=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/gplus-share.png"></a>' +
+          '<div class="redirect-link"><a href="http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/redirect.png"></a></div>' +
           '</div>' +
           '</div></div>';
       } else {
@@ -41,6 +42,7 @@ $(document).ready(function() {
           '<a href="https://www.facebook.com/sharer/sharer.php?u=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/fb-like.png"></a>' +
           '<a href="https://twitter.com/home?status=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/twitter-share.png"></a>' +
           '<a href="https://plus.google.com/share?url=http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/gplus-share.png"></a>' +
+          '<div class="redirect-link"><a href="http://test.wjhuang.net/a/' + e.qa.id + '" target="_blank"><img src="images/redirect.png"></a></div>' +
           '</div>' +
           '</div></div>';
       }
