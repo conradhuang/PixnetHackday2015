@@ -79,13 +79,22 @@
             }
             $totalkgn = $mongo->kg->count($query);
             if($totalkgn){
-                $n = min($n, $totalkgn, 100);
-                while($n > 0){
+                $cn = min($n, $totalkgn, 100);
+                while($cn > 0){
                     $kg = getAkg($query);
                     if(!isset($dict[$kg['id']])){
-                        $n--;
+                        $cn--;
                         $response['data'][] = $kg;
                     }
+                }
+                if(!empty($_GET['manual'])){ // fallback if not enough
+                    $collected = count($response['data']);
+                    if($collected < $n){
+                        unset($query['manual']);
+                        for($i=0; $i< $n - $collected; $i++){
+                            $response['data'][] = getAkg($query);
+                        }
+                    }    
                 }
             }
             else{
