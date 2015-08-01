@@ -33,10 +33,15 @@
     width: 64px;
     margin-right: 20px;
 }
-.thumb, .map {
+.thumb {
     float: right;
     max-width: 200px;
     margin-left: 20px;
+}
+.map {
+    float: left;
+    max-width: 400px;
+    margin-right: 20px;
 }
 .more {
     margin-top: 10px;
@@ -55,7 +60,7 @@
     <h1 class="title"><?php echo $kg['q'];?></h1>
     
     <?php if(!empty($kg['location'])) { ?>
-    <img class="map" src="http://gws2.maps.yahoo.com/MapImage?imh=200&imw=200&locale=zh_TW&poi=%2C%2C%2Cll%3B%2Clocation-purple-xs-gws%2C<?php echo $kg['location']['lat'];?>%2C121.551147" />
+    <img class="map" src="http://gws2.maps.yahoo.com/MapImage?imh=400&imw=400&locale=zh_TW&poi=%2C%2C%2Cll%3B%2Clocation-purple-xs-gws%2C<?php echo $kg['location']['lat'];?>%2C121.551147" />
     <?php } ?>
     <?php if(!empty($kg['img'])) { ?>
     <img class="thumb" src="<?php echo $kg['img'];?>" />
