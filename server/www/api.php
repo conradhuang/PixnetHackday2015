@@ -74,6 +74,9 @@
             if(!empty($_GET['cat'])){
                 $query = getMongoOrCategories($_GET['cat']);
             }
+            if(!empty($_GET['manual'])){
+                $query['manual'] = true;
+            }
             $totalkgn = $mongo->kg->count($query);
             if($totalkgn){
                 $n = min($n, $totalkgn, 100);
