@@ -24,14 +24,12 @@ $(document).ready(function() {
 		"www.mobile01.com##.ad2_55642",
 		"www.mobile01.com##.ad-a1",
 		"www.mobile01.com###ad_56017",
-		"www.bing.com##.b_ad",
-		"www.appledaily.com.tw###google_flash_inline_div",
-		"www.appledaily.com.tw###google_image_div",
-		"www.appledaily.com.tw###leaderboard_ad_container",
-		"www.appledaily.com.tw###google_image_div",
-		"www.appledaily.com.tw###rectangleAD1_ad_container",
-		"www.gamer.com.tw##.BA-billboard",
-		"www.bnext.com.tw###google_ads_frame1",
+		"appledaily.com.tw###google_flash_inline_div",
+		"appledaily.com.tw###google_image_div",
+		"appledaily.com.tw###leaderboard_ad_container",
+		"appledaily.com.tw###google_image_div",
+		"appledaily.com.tw###rectangleAD1_ad_container",
+		"gamer.com.tw##.BA-billboard",
 		"www.mobile01.com###ad_55707",
 		"udn.com###aleosoftflash",
 		"udn.com###google_flash_div",
@@ -41,11 +39,14 @@ $(document).ready(function() {
 		"udn.com###ad_mag",
 
 		// iframe
-		"www.appledaily.com.tw###crowdynews-iframe",
+		"appledaily.com.tw###crowdynews-iframe",
+		"udn.com###google_ads_frame1",
+
 		// img
 		"gamer.com.tw**MATERIALS",
 		"gamer.com.tw**8kele",
-		"www.appledaily.com.tw**googlesyndication"
+		"appledaily.com.tw**googlesyndication",
+		"udn.com**ads"
 	];
 
 	function showPixnet() {
@@ -193,7 +194,7 @@ $(document).ready(function() {
 	            url: 'http://test.wjhuang.net/api.php?a=logkg&id=' + questionSet.id,
 	            dataType: 'json',
 	            success: function(result){
-	                console.log("id = " + questionSet.id + " ++");
+	                console.log("status = " + result.msg);
 	            }
 	        });
 		});
